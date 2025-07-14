@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bean Brew Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- CSS RESET ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Poppins", sans-serif; line-height: 1.6; color: #333; }
+    img { max-width: 100%; display: block; }
+
+    /* ---------- THEME VARIABLES ---------- */
+    :root {
+      --primary: #5b381f;
+      --accent:  #d89d5b;
+      --bg-light:#f5f2ef;
+      --dark:    #2e1c11;
+      --radius:  0.75rem;
+      --shadow:  0 4px 10px rgba(0,0,0,0.15);
+      --transition: 0.3s ease;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    header { background: url('https://placehold.co/1600x900') center/cover no-repeat; height: 75vh; position: relative; }
+    header::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2rem; z-index: 10;
+      background: rgba(255,255,255,0.85); backdrop-filter: blur(6px);
+      box-shadow: var(--shadow);
+    }
+    nav .logo { font-weight: 600; font-size: 1.4rem; color: var(--primary); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav a { text-decoration: none; color: var(--dark); font-weight: 500; position: relative; }
+    nav a::after {
+      content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
+      background: var(--accent); transition: width var(--transition);
+    }
+    nav a:hover::after { width: 100%; }
+
+    .hero-text {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; text-align: center;
+      color: #fff; z-index: 2;
+    }
+    .hero-text h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 600; }
+    .hero-text p  { margin: 1rem 0 2rem; font-size: 1.2rem; max-width: 35ch; }
+    .btn-primary {
+      background: var(--accent); color: var(--dark); border: none;
+      padding: 0.75rem 2rem; font-size: 1rem; border-radius: var(--radius);
+      cursor: pointer; transition: background var(--transition);
+    }
+    .btn-primary:hover { background: #eab67e; }
+
+    section { padding: 4rem 1rem; max-width: 1100px; margin: 0 auto; }
+    h2.section-title { text-align: center; margin-bottom: 2.5rem; font-weight: 600; color: var(--primary); }
+
+    /* ---------- ABOUT ---------- */
+    #about { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; align-items: center; }
+
+    /* ---------- MENU ---------- */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.5rem; }
+    .card {
+      background: #fff; border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); transition: transform var(--transition);
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card img { height: 180px; object-fit: cover; }
+    .card-body { padding: 1.25rem; }
+    .card-body h3 { margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); }
+    .card-body p { font-size: 0.9rem; }
+
+    /* ---------- CONTACT ---------- */
+    form { display: grid; gap: 1rem; }
+    input, textarea {
+      width: 100%; padding: 0.75rem; border: 1px solid #ccc;
+      border-radius: var(--radius); font-size: 1rem;
+    }
+    textarea { resize: vertical; min-height: 120px; }
+    form button { justify-self: start; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--primary); color: #fff;
+      text-align: center; padding: 1.5rem 1rem;
+    }
+
+    /* ---------- RESPONSIVE EXTRAS ---------- */
+    @media (max-width: 600px) {
+      nav ul { display: none; } /* keep it simple; you’d add a burger in real projects */
+      .hero-text p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">Bean&nbsp;Brew&nbsp;Café</span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="hero-text">
+      <h1>Fresh Roasts, Cozy Vibes</h1>
+      <p>Serving ethically‑sourced coffee &amp; artisan pastries in the heart of town.</p>
+      <a href="#menu"><button class="btn-primary">Explore Menu</button></a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <img src="https://placehold.co/600x400" alt="Barista pouring coffee">
+    <div>
+      <h2 class="section-title">Our Story</h2>
+      <p>Founded in 2014, Bean Brew Café began with a simple mission: craft the perfect cup while fostering community.
+         We partner with small farms, roast in‑house, and bake fresh every morning.</p>
+      <p>Whether you’re after a rich espresso, a velvety latte, or a flaky croissant,
+         our baristas and bakers have got you covered.</p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <h2 class="section-title">Customer Favorites</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://placehold.co/400x300" alt="Cappuccino">
+        <div class="card-body">
+          <h3>Cappuccino</h3>
+          <p>Classic Italian‑style espresso topped with silky micro‑foam.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/400x300" alt="Cold Brew">
+        <div class="card-body">
+          <h3>Cold Brew</h3>
+          <p>Slow‑steeped 18 hours for a smooth, chocolatey flavor.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/400x300" alt="Croissant">
+        <div class="card-body">
+          <h3>Butter Croissant</h3>
+          <p>Flaky, buttery layers baked fresh at dawn every day.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/400x300" alt="Matcha Latte">
+        <div class="card-body">
+          <h3>Matcha Latte</h3>
+          <p>Ceremonial‑grade matcha whisked with oat milk &amp; honey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <form action="#" method="post">
+      <input type="text"  name="name"  placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button class="btn-primary" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Bean Brew Café • 123 Roast Ave, Brewtown • Open 7 am – 9 pm
+  </footer>
+
+</body>
+</html>
