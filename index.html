@@ -8,12 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* ---------- CSS RESET ---------- */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: "Poppins", sans-serif; line-height: 1.6; color: #333; }
     img { max-width: 100%; display: block; }
 
-    /* ---------- THEME VARIABLES ---------- */
     :root {
       --primary: #5b381f;
       --accent:  #d89d5b;
@@ -24,9 +22,14 @@
       --transition: 0.3s ease;
     }
 
-    /* ---------- LAYOUT ---------- */
-    header { background: url('https://placehold.co/1600x900') center/cover no-repeat; height: 75vh; position: relative; }
-    header::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    header {
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 75vh; position: relative;
+    }
+    header::after {
+      content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5);
+    }
+
     nav {
       position: fixed; top: 0; left: 0; width: 100%;
       display: flex; justify-content: space-between; align-items: center;
@@ -34,6 +37,7 @@
       background: rgba(255,255,255,0.85); backdrop-filter: blur(6px);
       box-shadow: var(--shadow);
     }
+
     nav .logo { font-weight: 600; font-size: 1.4rem; color: var(--primary); }
     nav ul { list-style: none; display: flex; gap: 1.5rem; }
     nav a { text-decoration: none; color: var(--dark); font-weight: 500; position: relative; }
@@ -48,51 +52,51 @@
       justify-content: center; align-items: center; text-align: center;
       color: #fff; z-index: 2;
     }
+
     .hero-text h1 { font-size: clamp(2rem, 5vw, 4rem); font-weight: 600; }
     .hero-text p  { margin: 1rem 0 2rem; font-size: 1.2rem; max-width: 35ch; }
+
     .btn-primary {
       background: var(--accent); color: var(--dark); border: none;
       padding: 0.75rem 2rem; font-size: 1rem; border-radius: var(--radius);
       cursor: pointer; transition: background var(--transition);
     }
+
     .btn-primary:hover { background: #eab67e; }
 
     section { padding: 4rem 1rem; max-width: 1100px; margin: 0 auto; }
     h2.section-title { text-align: center; margin-bottom: 2.5rem; font-weight: 600; color: var(--primary); }
 
-    /* ---------- ABOUT ---------- */
     #about { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; align-items: center; }
 
-    /* ---------- MENU ---------- */
     .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.5rem; }
     .card {
       background: #fff; border-radius: var(--radius); overflow: hidden;
       box-shadow: var(--shadow); transition: transform var(--transition);
     }
+
     .card:hover { transform: translateY(-4px); }
     .card img { height: 180px; object-fit: cover; }
     .card-body { padding: 1.25rem; }
     .card-body h3 { margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); }
     .card-body p { font-size: 0.9rem; }
 
-    /* ---------- CONTACT ---------- */
     form { display: grid; gap: 1rem; }
     input, textarea {
       width: 100%; padding: 0.75rem; border: 1px solid #ccc;
       border-radius: var(--radius); font-size: 1rem;
     }
+
     textarea { resize: vertical; min-height: 120px; }
     form button { justify-self: start; }
 
-    /* ---------- FOOTER ---------- */
     footer {
       background: var(--primary); color: #fff;
       text-align: center; padding: 1.5rem 1rem;
     }
 
-    /* ---------- RESPONSIVE EXTRAS ---------- */
     @media (max-width: 600px) {
-      nav ul { display: none; } /* keep it simple; you’d add a burger in real projects */
+      nav ul { display: none; }
       .hero-text p { font-size: 1rem; }
     }
   </style>
@@ -118,7 +122,7 @@
 
   <!-- ABOUT -->
   <section id="about">
-    <img src="https://placehold.co/600x400" alt="Barista pouring coffee">
+    <img src="https://images.unsplash.com/photo-1523906630133-f6934a1ab2b9?fit=crop&w=600&q=80" alt="Barista pouring coffee">
     <div>
       <h2 class="section-title">Our Story</h2>
       <p>Founded in 2014, Bean Brew Café began with a simple mission: craft the perfect cup while fostering community.
@@ -133,28 +137,35 @@
     <h2 class="section-title">Customer Favorites</h2>
     <div class="card-grid">
       <div class="card">
-        <img src="https://placehold.co/400x300" alt="Cappuccino">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSOF2LaYCGbF6GvHhC1Xnom2BWVsbNu9jLY_NMEviwNSn9p6qZJGN1Lopw6BSWX7g8XrTWgEte9emSu5akuGYjLt6tw5JtwWBYZhE0uke0kpw" alt="Image" width="400" height="300">
+
+
+
         <div class="card-body">
           <h3>Cappuccino</h3>
           <p>Classic Italian‑style espresso topped with silky micro‑foam.</p>
         </div>
       </div>
       <div class="card">
-        <img src="https://placehold.co/400x300" alt="Cold Brew">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQTqjmDL_MmgFUGXb-5JzvCeMUchyXMxaigZi4yerlcflrpVlGiTwBiZyiIUp3DyZKWQgA9PmPK-BBgrDFh0guHfQns4DOAJEn1x_sGc9EnHw" alt="Image" width="400" height="300">
+
+
         <div class="card-body">
           <h3>Cold Brew</h3>
           <p>Slow‑steeped 18 hours for a smooth, chocolatey flavor.</p>
         </div>
       </div>
       <div class="card">
-        <img src="https://placehold.co/400x300" alt="Croissant">
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRN4gKZ-lN74Te8LwD5tVDJum_y_o6YSPmypZucZ7hI1ZlJD_DJhAQ3UjxtrHM9IqwMQdhwN9znlVlVQaADeQavGfBJvvnKTLPHe-3GhtgK" alt="Image" width="400" height="300">
+
         <div class="card-body">
           <h3>Butter Croissant</h3>
           <p>Flaky, buttery layers baked fresh at dawn every day.</p>
         </div>
       </div>
       <div class="card">
-        <img src="https://placehold.co/400x300" alt="Matcha Latte">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS5SskAWXMN7staHutQ3_RxdWoEppACiPs_mOUxR7kg5mydftiIaIsPR9sw2z30vsifS20rUJWlTAwcIOJk-dksYbl11pTtMa2BDu3Ds6bj" alt="Image" width="400" height="300">
+
         <div class="card-body">
           <h3>Matcha Latte</h3>
           <p>Ceremonial‑grade matcha whisked with oat milk &amp; honey.</p>
@@ -180,3 +191,4 @@
 
 </body>
 </html>
+
