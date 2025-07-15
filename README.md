@@ -61,7 +61,7 @@ cafe-site-s3-cloudfront/
 
  
 - Meghana Thallam — [@MeghanaThallam17](https://github.com/MeghanaThallam17)  
-- Spandana — [@Spn147](https://github.com/Spn147)  
+- Sri pujitha Nag — [@Spn147](https://github.com/Spn147)  
 - Anjali Goud — [@Anjaligoud-05](https://github.com/Anjaligoud-05)  
 - Karthik Reddy — [@M-Karthik-Reddy](https://github.com/M-Karthik-Reddy)  
 
