@@ -19,6 +19,8 @@ This is a beautifully designed static website for a fictional café named **Bean
 cafe-site-s3-cloudfront/
 ├── index.html # Main HTML file
 ├── README.md # Project documentation
+├── images/ # Folder containing image assets (e.g., cafe photos, icons, backgrounds)
+
 
 
 ---
@@ -55,10 +57,13 @@ cafe-site-s3-cloudfront/
 
 ---
 
-## 🧑‍💻 Author
+## 🧑‍💻 Authors
 
-**Meghana Thallam**  
-📌 GitHub: [@MeghanaThallam17](https://github.com/MeghanaThallam17)
+ 
+- Meghana Thallam — [@MeghanaThallam17](https://github.com/MeghanaThallam17)  
+- Spandana — [@Spn147](https://github.com/Spn147)  
+- Anjali Goud — [@Anjaligoud-05](https://github.com/Anjaligoud-05)  
+- Karthik Reddy — [@M-Karthik-Reddy](https://github.com/M-Karthik-Reddy)  
 
 ---
 
