@@ -9,8 +9,8 @@ This is a beautifully designed static website for a fictional café named **Bean
 
 > Hosted via **Amazon S3 + CloudFront CDN**
 
-📎 [Live Demo Link](https://your-cloudfront-url.cloudfront.net)  
-*(Replace with actual CloudFront distribution URL)*
+📎 [Live Demo Link](https://d1oel7z1zb70cr.cloudfront.net/abc.html)  
+
 
 ---
 
